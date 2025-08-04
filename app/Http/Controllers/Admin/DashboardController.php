@@ -12,7 +12,7 @@ class DashboardController extends Controller
     {
         $user = Auth::user();
 
-        return view("admin", compact("user"));
+        return view("admin.index", compact("user"));
     }
 
     public function profile()

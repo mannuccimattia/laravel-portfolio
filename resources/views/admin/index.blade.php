@@ -1,4 +1,4 @@
-@extends('layouts.admin-layout')
+@extends('layouts.admin')
 
 @section('title')
     Index | Admin
@@ -22,7 +22,7 @@
                             <strong>mail:</strong> {{ $user->email }}
                         </div>
                         <div>
-                            <strong>mreated at:</strong> {{ $user->created_at }}
+                            <strong>created at:</strong> {{ $user->created_at }}
                         </div>
 
                     </div>
