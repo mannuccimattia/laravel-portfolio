@@ -7,10 +7,10 @@
 @section('content')
     <div class="container">
 
-        <h1>My projects</h1>
+        <h1 class="my-4">My projects</h1>
 
-        <div class="">
-            <div class="row">
+        <div class="container border rounded">
+            <div class="row bg-dark text-white rounded-top">
                 <div class="col fw-bold">
                     Name
                 </div>
@@ -25,9 +25,9 @@
                 </div>
             </div>
 
-
+            {{-- @dd($projects) --}}
             @foreach ($projects as $project)
-                <div class="row">
+                <div class="row my-3 pb-3 border-bottom ">
                     <div class="col">
                         {{ $project->name }}
                     </div>
@@ -38,7 +38,7 @@
                         {{ $project->date }}
                     </div>
                     <div class="col">
-                        link
+                        <a href="{{ route('projects.show', $project->id) }}">Details</a>
                     </div>
                 </div>
             @endforeach
