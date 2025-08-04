@@ -6,10 +6,12 @@
 
 @section('content')
     <div class="container">
+        <div class="my-4 d-flex justify-content-between">
+            <h1>My projects</h1>
+            <a href="{{ route('projects.create') }}" class="btn btn-outline-dark">Add a project</a>
+        </div>
 
-        <h1 class="my-4">My projects</h1>
-
-        <div class="container border rounded">
+        <div class="container border rounded mb-4">
             <div class="row bg-dark text-white rounded-top">
                 <div class="col fw-bold">
                     Name
@@ -27,7 +29,7 @@
 
             {{-- @dd($projects) --}}
             @foreach ($projects as $project)
-                <div class="row my-3 pb-3 border-bottom ">
+                <div class="row mt-3 pb-3 border-bottom ">
                     <div class="col">
                         {{ $project->name }}
                     </div>

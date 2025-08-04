@@ -1,1 +1,11 @@
-@import '~bootstrap/scss/bootstrap'
+@import '~bootstrap/scss/bootstrap';
+
+
+.narrow {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.input-group-text {
+  min-width: 120px;
+}
