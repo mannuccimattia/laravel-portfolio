@@ -24,6 +24,16 @@
             </div>
 
             <div class="input-group mb-3">
+                <label class="input-group-text" for="type_id">Type</label>
+                <select name="type_id" id="type_id" class="form-select" aria-label="project type select">
+                    @foreach ($types as $type)
+                        <option value="{{ $type->id }}" {{ $project->type_id == $type->id ? 'selected' : '' }}>
+                            {{ $type->name }}</option>
+                    @endforeach
+                </select>
+            </div>
+
+            <div class="input-group mb-3">
                 <label class="input-group-text" for="date">Date</label>
                 <input class="form-control" type="date" name="date" id="date" value="{{ $project->date }}">
             </div>

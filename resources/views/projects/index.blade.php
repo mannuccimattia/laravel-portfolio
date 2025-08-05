@@ -17,7 +17,7 @@
                     Name
                 </div>
                 <div class="col fw-bold">
-                    Client
+                    Type
                 </div>
                 <div class="col fw-bold">
                     Date
@@ -34,7 +34,7 @@
                         {{ $project->name }}
                     </div>
                     <div class="col">
-                        {{ $project->client }}
+                        {{ $project->type->name }}
                     </div>
                     <div class="col">
                         {{ $project->date }}
