@@ -8,7 +8,9 @@
     <div class="container">
         <div class="my-4 d-flex justify-content-between">
             <h1>My projects</h1>
-            <a href="{{ route('projects.create') }}" class="btn btn-outline-dark">Add a project</a>
+            <div>
+                <a href="{{ route('projects.create') }}" class="btn btn-outline-dark">Add a project</a>
+            </div>
         </div>
 
         <div class="container border rounded mb-4">
@@ -34,7 +36,7 @@
                         {{ $project->name }}
                     </div>
                     <div class="col">
-                        {{ $project->type->name }}
+                        {{ $project->type?->name ?? 'N/A' }}
                     </div>
                     <div class="col">
                         {{ $project->date }}

@@ -23,7 +23,7 @@
         <small>
             Made for <b>{{ $project->client }}</b> in <b>{{ $project->date }}</b>
         </small>
-        <span class="badge rounded-pill text-bg-info ms-2">{{ $project->type->name }}</span>
+        <span class="badge rounded-pill text-bg-info ms-2">{{ $project->type?->name ?? 'N/A' }}</span>
         <p class="my-4">{{ $project->description }}</p>
         <a href="{{ route('projects.index') }}">Back to index</a>
     </div>

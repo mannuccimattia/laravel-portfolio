@@ -6,9 +6,11 @@
 
 @section('content')
     <div class="container">
-        <div class="my-4 d-flex justify-content-between">
+        <div class="my-4 d-flex justify-content-between align-items-center">
             <h1>Types of projects</h1>
-            <a href="{{ route('types.create') }}" class="btn btn-outline-dark">Add a type</a>
+            <div>
+                <a href="{{ route('types.create') }}" class="btn btn-outline-dark">Add a type</a>
+            </div>
         </div>
 
         <div class="container border rounded mb-4">

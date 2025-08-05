@@ -18,10 +18,20 @@
                         @endif
 
                         {{ __('You are logged in!') }}
-                        <p>
-                            <a href="{{ url('/admin') }}">
-                                {{ __('Admin') }}</a>
-                        </p>
+                        <div class="d-flex gap-3">
+                            <p>
+                                <a href="{{ url('/admin') }}">
+                                    {{ __('Admin') }}</a>
+                            </p>
+                            <p>
+                                <a href="{{ url('/projects') }}">
+                                    {{ __('Projects') }}</a>
+                            </p>
+                            <p>
+                                <a href="{{ url('/types') }}">
+                                    {{ __('Types') }}</a>
+                            </p>
+                        </div>
 
                     </div>
                 </div>
