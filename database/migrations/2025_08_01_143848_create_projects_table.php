@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
 
             $table->string("name");
-            $table->string("client");
+            $table->string("client")->nullable();
             $table->date("date");
             $table->longText("description");
 
