@@ -25,6 +25,13 @@
             {{ $project->client ? " for $project->client" : ' ' }}
             in {{ $project->date }}
         </small>
+        <div class="d-flex align-items-center mt-2 gap-2">
+            @foreach ($project->technologies as $tech)
+                <div class="badge" style="background-color: {{ $tech->color }}">
+                    {{ $tech->name }}
+                </div>
+            @endforeach
+        </div>
         <p class="my-4">{{ $project->description }}</p>
         <a href="{{ route('projects.index') }}">Back to index</a>
     </div>
