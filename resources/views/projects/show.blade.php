@@ -26,7 +26,7 @@
             in {{ $project->date }}
         </small>
         @if (count($project->technologies) > 0)
-            <div class="d-flex align-items-center mt-2 gap-2">
+            <div class="d-flex flex-wrap align-items-center mt-2 gap-2">
                 @foreach ($project->technologies as $tech)
                     <div class="badge" style="background-color: {{ $tech->color }}">
                         {{ $tech->name }}
