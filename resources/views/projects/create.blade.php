@@ -31,6 +31,21 @@
             </div>
 
             <div class="input-group mb-3">
+                <label class="input-group-text" for="technologies_id">Technologies</label>
+                <div class="form-control d-flex flex-wrap row-cols-4">
+                    @foreach ($technologies as $tech)
+                        <div class="col">
+                            <input type="checkbox" name="technologies[]" value="{{ $tech->id }}"
+                                id="{{ $tech->id }}">
+                            <small>
+                                <label for="{{ $tech->id }}">{{ $tech->name }}</label>
+                            </small>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+
+            <div class="input-group mb-3">
                 <label class="input-group-text" for="date">Date</label>
                 <input class="form-control" type="date" name="date" id="date">
             </div>
