@@ -21,9 +21,10 @@
         </div>
 
         <small>
-            Made for <b>{{ $project->client }}</b> in <b>{{ $project->date }}</b>
+            {{ $project->type ? $project->type->name . ' project made' : 'Made' }}
+            {{ $project->client ? " for $project->client" : ' ' }}
+            in {{ $project->date }}
         </small>
-        <span class="badge rounded-pill text-bg-info ms-2">{{ $project->type?->name ?? 'N/A' }}</span>
         <p class="my-4">{{ $project->description }}</p>
         <a href="{{ route('projects.index') }}">Back to index</a>
     </div>
