@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TechnologyController;
 use App\Http\Controllers\TypeController;
 use Illuminate\Support\Facades\Route;
 
@@ -39,6 +40,10 @@ Route::resource("projects", ProjectController::class)
 ;
 
 Route::resource("types", TypeController::class)
+    // ->middleware(['auth', 'verified'])
+;
+
+Route::resource("technologies", TechnologyController::class)
     // ->middleware(['auth', 'verified'])
 ;
 
