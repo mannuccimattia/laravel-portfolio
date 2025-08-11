@@ -8,8 +8,8 @@
     <div class="container mt-4">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <div class="card bg-transparent text-light border-secondary shadow mt-4">
-                    <div class="card-header bg-secondary border-secondary">{{ __('Login') }}</div>
+                <div class="card dark mt-4">
+                    <div class="card-header dark">{{ __('Login') }}</div>
 
                     <div class="card-body mt-3">
                         <form method="POST" action="{{ route('login') }}">
@@ -21,8 +21,8 @@
 
                                 <div class="col-md-6">
                                     <input id="email" type="email"
-                                        class="form-control bg-dark text-light border-secondary @error('email') is-invalid @enderror"
-                                        name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                        class="form-control dark @error('email') is-invalid @enderror" name="email"
+                                        value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">
@@ -38,8 +38,8 @@
 
                                 <div class="col-md-6">
                                     <input id="password" type="password"
-                                        class="form-control bg-dark text-light border-secondary @error('password') is-invalid @enderror"
-                                        name="password" required autocomplete="current-password">
+                                        class="form-control dark @error('password') is-invalid @enderror" name="password"
+                                        required autocomplete="current-password">
 
                                     @error('password')
                                         <span class="invalid-feedback" role="alert">
@@ -52,8 +52,8 @@
                             <div class="mb-4 row justify-content-center">
                                 <div class="col-md-6 offset-md-4">
                                     <div class="form-check">
-                                        <input class="form-check-input bg-dark text-light border-secondary" type="checkbox"
-                                            name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                        <input class="form-check-input dark" type="checkbox" name="remember" id="remember"
+                                            {{ old('remember') ? 'checked' : '' }}>
 
                                         <label class="form-check-label" for="remember">
                                             {{ __('Remember Me') }}

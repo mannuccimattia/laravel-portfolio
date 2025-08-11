@@ -8,8 +8,8 @@
     <div class="container mt-4">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <div class="card bg-transparent text-light border-secondary shadow mt-4">
-                    <div class="card-header bg-secondary border-secondary">{{ __('Register') }}</div>
+                <div class="card dark mt-4">
+                    <div class="card-header dark">{{ __('Register') }}</div>
 
                     <div class="card-body mt-3">
                         <form method="POST" action="{{ route('register') }}">
@@ -21,8 +21,8 @@
 
                                 <div class="col-md-6">
                                     <input id="name" type="text"
-                                        class="form-control bg-dark text-light border-secondary @error('name') is-invalid @enderror"
-                                        name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                        class="form-control dark @error('name') is-invalid @enderror" name="name"
+                                        value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                                     @error('name')
                                         <span class="invalid-feedback" role="alert">
@@ -38,8 +38,8 @@
 
                                 <div class="col-md-6">
                                     <input id="email" type="email"
-                                        class="form-control bg-dark text-light border-secondary @error('email') is-invalid @enderror"
-                                        name="email" value="{{ old('email') }}" required autocomplete="email">
+                                        class="form-control dark @error('email') is-invalid @enderror" name="email"
+                                        value="{{ old('email') }}" required autocomplete="email">
 
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">
@@ -55,8 +55,8 @@
 
                                 <div class="col-md-6">
                                     <input id="password" type="password"
-                                        class="form-control bg-dark text-light border-secondary @error('password') is-invalid @enderror"
-                                        name="password" required autocomplete="new-password">
+                                        class="form-control dark @error('password') is-invalid @enderror" name="password"
+                                        required autocomplete="new-password">
 
                                     @error('password')
                                         <span class="invalid-feedback" role="alert">
@@ -71,8 +71,7 @@
                                     class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="password-confirm" type="password"
-                                        class="form-control bg-dark text-light border-secondary"
+                                    <input id="password-confirm" type="password" class="form-control dark"
                                         name="password_confirmation" required autocomplete="new-password">
                                 </div>
                             </div>
