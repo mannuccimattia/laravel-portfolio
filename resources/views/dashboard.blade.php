@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+    {{ Auth::user()->name }} | Dashboard
+@endsection
+
 @section('content')
     <div class="container">
         <h2 class="fs-4 text-secondary my-4">
@@ -30,6 +34,10 @@
                             <p>
                                 <a href="{{ url('/types') }}">
                                     {{ __('Types') }}</a>
+                            </p>
+                            <p>
+                                <a href="{{ url('/technologies') }}">
+                                    {{ __('Technologies') }}</a>
                             </p>
                         </div>
 

@@ -1,5 +1,12 @@
 @import '~bootstrap/scss/bootstrap';
 
+.logo-mm {
+  width: 50px !important;
+}
+
+.dropdown-item.text-light:hover {
+  color: black !important;
+}
 
 .narrow {
   max-width: 980px;
